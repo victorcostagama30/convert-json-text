@@ -6,7 +6,7 @@ colorama
 distro
 dnspython
 Flask
-h11=
+h11
 idna
 itsdangerous
 Jinja2
