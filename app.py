@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home():
     objeto = request.args.get('objeto')
-    texto = json.loads(objeto)
+    texto = json.dumps(objeto)
     return texto
 
 
