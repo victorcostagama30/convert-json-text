@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import json
 
 app = Flask(__name__)
@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    objeto = (request.args.get('objeto'))
-    texto = json.dumps(objeto)
+    objeto = request.args.get('objeto')..decode('utf-8')
+    texto = json.loads(objeto)
     return texto
 
 
